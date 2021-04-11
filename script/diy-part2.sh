@@ -13,3 +13,9 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+# Add extra Packages
+rm -rf /package/lean/luci-theme-argon  
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/mchome/openwrt-dogcom.git package/openwrt-dogcom
+git clone https://github.com/mchome/luci-app-dogcom.git package/luci-app-dogcom
